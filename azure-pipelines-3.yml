@@ -1,0 +1,18 @@
+trigger:
+  branches:
+    include:
+      - main  # Replace with your branch name
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'  # Path to your pom.xml
+    goals: 'clean install'
+    options: '-DskipTests'  # Use this if you want to skip tests in the build
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    mavenOptions: '-Xmx1024m'
+    codeCoverageToolOption: 'None'
