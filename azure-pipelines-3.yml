@@ -17,10 +17,5 @@ steps:
      mavenAuthenticateFeed: false
      effectivePomSkip: false
      sonarQubeRunAnalysis: false
- - task: Bash@3
-   inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      ls -ltr
-      echo 'Hello world'
+ - script:  |
+    pwd    
