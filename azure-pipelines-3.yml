@@ -17,8 +17,10 @@ steps:
      mavenAuthenticateFeed: false
      effectivePomSkip: false
      sonarQubeRunAnalysis: false
-     
-- script: |
-    echo "Current working directory in Bash:"
-    pwd
-  displayName: 'Print Current Working Directory (Bash)'
+ - task: Bash@3
+   inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      ls -ltr
+      echo 'Hello world'
