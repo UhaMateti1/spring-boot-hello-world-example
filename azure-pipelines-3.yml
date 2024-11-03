@@ -21,4 +21,6 @@ steps:
  - script: |
      pwd
      ls -ltr
+     cd target
+     ls -ltr
      echo "running script"
