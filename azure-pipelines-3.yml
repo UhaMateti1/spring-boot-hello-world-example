@@ -18,4 +18,4 @@ steps:
      effectivePomSkip: false
      sonarQubeRunAnalysis: false
  - script:  |
-    pwd    
+    ls -ltr
